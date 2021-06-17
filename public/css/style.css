@@ -20,14 +20,6 @@ header {
     align-items: flex-start;
 }
 
-.nav {
-    text-align: left;
-}
-
-.techblog {
-    text-align: left;
-}
-
 nav {
     list-style-type: none;
     color: var(--brown);
