@@ -1,0 +1,59 @@
+:root {
+    background: #D9EAD3;
+    --brown: #231010;
+    --mint: #D9EAD3;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 20%;
+    background-color: var(--brown);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.nav {
+    text-align: left;
+}
+
+.techblog {
+    text-align: left;
+}
+
+nav {
+    list-style-type: none;
+    color: var(--brown);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 4%;
+}
+
+li {
+    color: var(--mint);
+}
+
+a {
+    text-decoration: inherit;
+    color: var(--mint);
+}
+
+h1 {
+    text-align: Left;
+    background-color: var(--mint);
+    border-radius: 2%;
+    padding: 0;
+    margin-left: 4%;
+}
+
+h1 span {
+    background-color: var(--mint);
+}
