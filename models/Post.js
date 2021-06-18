@@ -15,10 +15,6 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        author: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         content: {
             type: DataTypes.STRING(2000),
         },
@@ -32,6 +28,7 @@ Post.init(
             references: {
                 model: 'user',
                 key: 'id',
+                include: ['username']
             },
         },
     },
