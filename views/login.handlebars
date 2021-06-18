@@ -1,28 +1,30 @@
-{{#if logged_in}}
+{{#if loggedin}}
 <div class="login">
     <div class="header">
-        <h2>Sign Up</h2>
+        <h2>Log in.</h2>
     </div>
     <div class="main">
-        <h1>Log in.</h1>
-        <form class="form login-form">
-            <label for="username">Username:</label><br>
+        <form class="login-form">
+            <label for="usernameL">Username:</label><br>
             <input type="text" id="username"><br>
-            <label for="lname">Password:</label><br>
+            <label for="passwordL">Password:</label><br>
             <input type="text" id="password">
-            <button>Submit</button>
+            <input type="button" value="submit"></input>
         </form>
     </div>
 </div>
 {{else}}
 <div class="signup">
-    <h1>Sign up.</h1>
-    <form class="form signup-form">
-        <label for="username">Username:</label><br>
+    <div class="header">
+       <h1>Sign up.</h1> 
+    </div>
+    
+    <form class="signup-form">
+        <label for="username-signupL">Username:</label><br>
         <input type="text" id="username-signup"><br>
-        <label for="lname">Password:</label><br>
+        <label for="username-singupL">Password:</label><br>
         <input type="text" id="password-signup">
-        <button>Submit</button>
+        <input type="button" value="submit"></input>
     </form>
 </div>
 {{/if}}

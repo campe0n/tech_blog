@@ -15,8 +15,12 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        content: {
+        author: {
             type: DataTypes.STRING,
+            allowNull: false,
+        },
+        content: {
+            type: DataTypes.STRING(2000),
         },
         date_created: {
             type: DataTypes.DATE,
