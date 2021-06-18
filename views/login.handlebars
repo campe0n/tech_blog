@@ -1,0 +1,30 @@
+{{#if logged_in}}
+<div class="login">
+    <div class="header">
+        <h2>Sign Up</h2>
+    </div>
+    <div class="main">
+        <h1>Log in.</h1>
+        <form class="form login-form">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username"><br>
+            <label for="lname">Password:</label><br>
+            <input type="text" id="password">
+            <button>Submit</button>
+        </form>
+    </div>
+</div>
+{{else}}
+<div class="signup">
+    <h1>Sign up.</h1>
+    <form class="form signup-form">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username-signup"><br>
+        <label for="lname">Password:</label><br>
+        <input type="text" id="password-signup">
+        <button>Submit</button>
+    </form>
+</div>
+{{/if}}
+
+<script src='../public/js/login.js'></script>'
