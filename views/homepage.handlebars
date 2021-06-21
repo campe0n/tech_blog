@@ -1,10 +1,11 @@
 {{#each posts as |post| }}
 <div class="card">
     <div class="header">
-        {{post.title}} {{post.date_created}}
+        <h1>{{post.title}}</h1> 
+        <p>{{format_date post.date_created}}</p>
     </div>
     <div class="main">
-        {{post.content}}
+       <p>{{post.content}}</p>
     </div>
 </div>
 {{/each}}

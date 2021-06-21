@@ -1,32 +1,30 @@
-{{#if loggedin}}
 <div class="login">
     <div class="header">
         <h2>Log in.</h2>
     </div>
     <div class="main">
         <form class="login-form">
-            <label for="usernameL">Username:</label><br>
-            <input type="text" id="username"><br>
-            <label for="passwordL">Password:</label><br>
-            <input type="text" id="password">
-            <input type="button" value="submit"></input>
+            <label for="username-label">Username:</label><br>
+            <input type="text" id="username-login"><br>
+            <label for="password-label">Password:</label><br>
+            <input type="text" id="password-login">
+            <input type="submit" value="Login"></input>
         </form>
     </div>
 </div>
-{{else}}
 <div class="signup">
     <div class="header">
        <h1>Sign up.</h1> 
     </div>
-    
+
     <form class="signup-form">
-        <label for="username-signupL">Username:</label><br>
+        <label for="username-label">Username:</label><br>
         <input type="text" id="username-signup"><br>
-        <label for="username-singupL">Password:</label><br>
-        <input type="text" id="password-signup">
-        <input type="button" value="submit"></input>
+        <label for="email-label">Email:</label><br>
+        <input type="text" id="email-signup"><br>
+        <label for="username-label">Password:</label><br>
+        <input type="text" id="password-signup"><br>
+        <input type="submit" value="Sign Up"></input>
     </form>
 </div>
-{{/if}}
-
-<script src='../public/js/login.js'></script>'
+<script src='../public/js/login.js'></script>
