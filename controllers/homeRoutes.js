@@ -52,13 +52,6 @@ router.get('/post', async (req, res) => {
     }
 });
 
-router.get('/dashboard', (req, res) => {
-    try {
-        res.render('dashboard')
-    } catch (err) {
-        res.status(500).json(err)
-    }
-})
 
 router.get('/newPost', (req, res) => {
     try {
@@ -67,6 +60,15 @@ router.get('/newPost', (req, res) => {
         res.status(500).json(err)
     }
 })
+
+router.get('/dashboard', (req, res) => {
+    try {
+        res.render('dashboard')
+    } catch (err) {
+        res.render(500).json(err)
+    }
+})
+
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {

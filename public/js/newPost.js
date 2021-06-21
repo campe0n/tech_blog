@@ -12,7 +12,7 @@ const posthandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.reload();
+            document.location.replace('/');
         } else {
             alert('Failed to log in.');
         }
