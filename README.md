@@ -8,7 +8,7 @@ Tech blog is a website that allows users to create accounts and interact with ot
 
 ## Image
 
-![Screenshot of Webpage](/public/techblogscreenshot.PNG)
+![Screenshot of Webpage](/public/images/tbscreenshot.PNG)
 
 ## Table of Contents
 
