@@ -6,9 +6,15 @@
 
 Tech blog is a website that allows users to create accounts and interact with other posts and users througout the app.
 
+## Image
+
+![Screenshot of Webpage](/public/techblogscreenshot.PNG)
+
 ## Table of Contents
 
 [Description](#description)
+
+[Image](#image)
 
 [Installation Instructions](#installation-instructions)
 
