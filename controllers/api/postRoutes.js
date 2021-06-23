@@ -5,16 +5,15 @@ const withAuth = require('../../utils/auth')
 router.post('/', withAuth, async (req, res) => {
     try {
         const newPost = await Post.create({
-            title: req.body.title,
-            content: req.body.content,
+            ...req.body,
             user_id: req.session.user_id,
         });
 
         res.status(200).json(newPost);
-    } catch (err) {
+    } catch(err) {
         res.status(400).json(err)
     }
-});
+})
 
 router.delete('/:id', async (req, res) => {
     try {
