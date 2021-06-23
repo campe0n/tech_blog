@@ -4,23 +4,13 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-        const dbPostData = await Post.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['username'],
-                },
-            ],
-        });
+        const dbPostData = await Post.findAll();
 
         const posts = dbPostData.map((post) =>
             post.get({ plain: true })
         );
 
-        res.render('homepage', {
-            posts,
-            logged_In: req.session.loggedIn,
-        });
+        res.render('homepage', { posts, logged_In: req.session.loggedIn, });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -34,8 +24,11 @@ router.get('/post/:id', async (req, res) => {
             res.status(404).json({ message: 'Post not found' });
             return;
         }
+
         const post = postData.get({ plain: true });
+        
         res.render('post', { post, loggedIn: req.session.loggedIn });
+        
     } catch (err) {
         res.status(500).json(err);
     }
@@ -51,7 +44,6 @@ router.get('/post', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
 
 router.get('/newPost', (req, res) => {
     try {
@@ -69,14 +61,18 @@ router.get('/dashboard', (req, res) => {
     }
 })
 
-
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/dashboard');
         return;
-    }
-    
-    res.render('login');
+    } res.render('login');
 })
 
-module.exports = router;
+
+
+
+
+
+
+
+
