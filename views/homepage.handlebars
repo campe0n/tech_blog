@@ -5,8 +5,10 @@
         <p>{{format_date post.date_created}}</p>
         <p>{{user.username}}
     </div>
-    <div class="main">
-        <p>{{post.content}}</p>
-    </div>
+
+        <div class="main">
+            <p>{{post.content}}</p>
+        </div>
+    <a href="/post/{{this.id}}"><button>Go to post</button></a>
 </div>
 {{/each}}

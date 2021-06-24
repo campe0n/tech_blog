@@ -16,4 +16,13 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
+router.get('/newComment', async (req, res) => {
+    try {
+        res.render('comment')
+    } catch (err) {
+        res.status(400).json(err);
+    }
+})
+
+router.get('/')
 module.exports = router;

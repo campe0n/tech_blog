@@ -1,24 +1,22 @@
-const posthandler = async (event) => {
+const commentHandler = async (event) => {
     event.preventDefault();
 
     const title = document.querySelector('#title-input').value.trim();
     const body = document.querySelector('#body-input').value.trim();
 
     if (title && body) {
-        const response = await fetch('/api/post', {
+        const response = await fetch('/api/comment', {
             method: 'POST',
-            body: JSON.strinfigify({ title, body }),
+            body: JSON.stringify({ title, body }),
             headers: { 'Content-Type': 'application/json' },
         });
 
         if (response.ok) {
             document.location.replace('/');
         } else {
-            alert('Failed to log in.');
+            alert('Failed to add comment');
         }
     }
-};
+}
 
-document
-    .querySelector('newpost-form')
-    .addEventListener('submit', posthandler);
+document.querySelector('comment-form').addEventListener('submit', commentHandler);
