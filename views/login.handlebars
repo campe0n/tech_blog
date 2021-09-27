@@ -1,30 +1,28 @@
 <div class="login">
-    <div class="header">
+    <div class="card">
         <h2>Log in.</h2>
-    </div>
-    <div class="main">
-        <form class="login-form">
-            <label for="Email-label">Email:</label><br>
-            <input type="text" id="Email-login"><br>
-            <label for="password-label">Password:</label><br>
-            <input type="text" id="password-login">
+        <form id="login-form">
+            <label for="email-label">Email:</label>
+            <input type="text" class="input" id="email-login"><br>
+            <label for="password-label">Password:</label>            
+            <input type="text" id="password-login"><br>
             <input type="submit" value="Login"></input>
         </form>
     </div>
 </div>
 <div class="signup">
-    <div class="header">
+    <div class="card">
         <h1>Sign up.</h1>
-    </div>
 
-    <form class="signup-form">
-        <label for="username-label">Username:</label><br>
+    <form id="signup-form">
+        <label for="username-label">Username:</label>
         <input type="text" id="username-signup"><br>
-        <label for="email-label">Email:</label><br>
+        <label for="email-label">Email:</label>
         <input type="text" id="email-signup"><br>
-        <label for="username-label">Password:</label><br>
+        <label for="username-label">Password:</label>
         <input type="text" id="password-signup"><br>
         <input type="submit" value="Sign Up"></input>
     </form>
+    </div>
 </div>
 <script src='/public/js/login.js'></script>

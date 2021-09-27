@@ -1,7 +1,7 @@
 const posthandler = async (event) => {
   event.preventDefault();
 
-  const title = document.querySelector("input[type='text']").value.trim();
+  const title = document.querySelector('input[type="text"]').value.trim();
   const body = document.querySelector("input[type='submit']").value.trim();
 
   if (title && body) {
