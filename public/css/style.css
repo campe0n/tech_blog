@@ -12,16 +12,26 @@ body {
 
 header {
   width: 100%;
-  height: 20%;
+  height: 10%;
   background-color: var(--brown);
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#titlenav {
+  width: 25%;
+  height: auto;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  margin: 0 2.75rem;
 }
 
 nav {
-  margin-left: 4rem;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
 }
 
 li {
@@ -37,6 +47,7 @@ a {
 
 main {
   padding: 0 2rem;
+  height: auto;
 }
 
 h1 {
@@ -44,7 +55,7 @@ h1 {
   background-color: white;
   border-radius: 2%;
   padding: 0;
-  margin-left: 4%;
+  margin: 0;
 }
 
 h1 span {
