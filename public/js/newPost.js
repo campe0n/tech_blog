@@ -1,16 +1,15 @@
 const posthandler = async (event) => {
   event.preventDefault();
 
-  const title = document.querySelector('input[type="text"]').value.trim();
-  const body = document.querySelector("input[type='submit']").value.trim();
+  const title = document.getElementById("title-input").value.trim();
+  const body = document.getElementById("body-input").value.trim();
 
   if (title && body) {
-    const response = await fetch("/api/post", {
+    const response = await fetch("/api/post/newPost", {
       method: "POST",
-      body: JSON.strinfigify({ title, body }),
+      body: JSON.stringify({ title, body }),
       headers: { "Content-Type": "application/json" },
     });
-    console.log(title, body);
 
     if (response.ok) {
       document.location.replace("/");
