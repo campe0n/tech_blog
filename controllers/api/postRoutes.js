@@ -3,10 +3,11 @@ const { Post } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.post("/", withAuth, async (req, res) => {
+  console.log("Body: ", req.body);
   try {
     const newPost = await Post.create({
       title: req.body.title,
-      body: req.body.body,
+      content: req.body.body,
       user_id: req.session.user_id,
     });
 
@@ -21,7 +22,7 @@ router.post("/newPost", withAuth, async (req, res) => {
   try {
     const newPost = await Post.create({
       title: req.body.title,
-      body: req.body.body,
+      content: req.body.body,
       user_id: req.session.user_id,
     });
 
