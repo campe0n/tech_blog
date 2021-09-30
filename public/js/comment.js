@@ -1,6 +1,5 @@
 const commentHandler = async (event) => {
   event.preventDefault();
-
   const comment = document.getElementById("comment-input").value.trim();
 
   if (comment) {
@@ -10,16 +9,14 @@ const commentHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
 
-    console.log(comment);
-
     if (response.ok) {
-      document.location.reload("/");
-    } else {
-      alert("Failed to add comment");
+      console.log(comment);
     }
+    document.location.reload("/");
+  } else {
+    alert("Failed to add comment");
   }
 };
-
 document
   .getElementById("comment-form")
   .addEventListener("submit", commentHandler);
