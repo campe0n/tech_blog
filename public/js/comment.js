@@ -1,20 +1,19 @@
 const commentHandler = async (event) => {
   event.preventDefault();
 
-  const title = document.getElementById("title-input").value.trim();
-  const body = document.getElementById("body-input").value.trim();
+  const comment = document.getElementById("comment-input").value.trim();
 
-  if (title && body) {
+  if (comment) {
     const response = await fetch("/api/comment", {
       method: "POST",
-      body: JSON.stringify({ title, body }),
+      body: JSON.stringify({ comment }),
       headers: { "Content-Type": "application/json" },
     });
 
-    console.log(title, body);
+    console.log(comment);
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.reload("/");
     } else {
       alert("Failed to add comment");
     }

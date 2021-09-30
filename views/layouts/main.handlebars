@@ -13,8 +13,12 @@
         <nav>
           <a href="/"><li>Home</li></a>
           <a href="/dashboard"><li>Dashboard</li></a>
-          <a href="/login/logout" id="logout"><li>Log out</li></a>
-          <a href="/login"><li>Login</li></a>
+          {{#if loggedIn}}
+            <a href="/login/logout" id="logout"><li>Log out</li></a>
+          {{/if}}
+          {{#unless loggedIn}}
+            <a href="/login"><li>Login</li></a>
+          {{/unless}}
         </nav>
         <h1><span>The Tech Blog</span></h1>
       </div>
@@ -25,4 +29,5 @@
   </body>
 </html>
 
-<script src="/js/logout.js"></script>
+<script src="/js/logout.js">
+</script>

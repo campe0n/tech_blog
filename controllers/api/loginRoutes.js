@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-const withAuth = require("../../utils/auth");
 
 router.post("/signin", async (req, res) => {
   try {
@@ -33,7 +32,7 @@ router.post("/", async (req, res) => {
       return;
     }
 
-    const validPassword = await userData.checkPasssword(req.body.password);
+    const validPassword = await userData.checkPasswd(req.body.password);
 
     if (!validPassword) {
       res.status(400).json({ message: "Incorrect email or password" });
