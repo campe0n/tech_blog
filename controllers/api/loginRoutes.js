@@ -2,6 +2,8 @@ const router = require("express").Router();
 const { User } = require("../../models");
 
 router.post("/signin", async (req, res) => {
+  console.log("Body: ", req.body);
+  console.log("Session: ", req.session);
   try {
     const userData = await User.create({
       username: req.body.username,
@@ -14,12 +16,16 @@ router.post("/signin", async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    console.log("Body: ", req.body);
+    console.log("Session: ", req.session);
     console.log(err);
     res.status(500).json(err);
   }
 });
 
 router.post("/", async (req, res) => {
+  console.log("Body: ", req.body);
+  console.log("Session: ", req.session);
   try {
     const userData = await User.findOne({
       where: {
@@ -43,6 +49,7 @@ router.post("/", async (req, res) => {
       if (!req.session.loggedIn) {
         req.session.loggedIn = true;
         req.session.username = userData.username;
+        req.session.user_id = userData.id;
       }
 
       res.status(200).json({
