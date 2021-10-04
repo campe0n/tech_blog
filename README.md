@@ -1,55 +1,21 @@
 # Tech Blog
 
-![Link](https://img.shields.io/github/license/campe0n/readme_generator?label=MIT&message=MIT&style=flat-square)
+![GitHub license](https://img.shields.io/badge/license-MIT-lightgreen.svg)
 
-## Description
+![Screenshot of Webpage](./public/images/ss2.png)
+
+# Description
 
 Tech blog is a website that allows users to create accounts and interact with other posts and users througout the app.
 
-## Image
+# Link to application
 
-![Screenshot of Webpage](/public/images/tbscreenshot.PNG)
+Go to [Tech Blog](https://techblog-mf.herokuapp.com/login)
 
-## Table of Contents
-
-[Description](#description)
-
-[Image](#image)
-
-[Installation Instructions](#installation-instructions)
-
-[Usage Information](#usage-information)
-
-[Contribution Guidelines](#contribution-guidelines)
-
-[Test Instructions](#test-instructions)
-
-[Questions](#questions)
-
-## Installation Instructions
-
-No Instructions
-
-## Usage Information
-
-No usage information
-
-## Contribution Guidelines
-
-No contribution neccessary
-
-## Test Instructions
-
-No test instructions
-
-## Questions
+# Questions
 
 If you have any questions, you can reach me using these methods.
 
-[github](https://github.com/campe0n)
+[Github](https://github.com/campe0n)
 
-email: melvinrf@Outlook.com
-
-## License
-
-This project is licensed by MIT
+Email: melvinrf@Outlook.com
